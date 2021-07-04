@@ -99,10 +99,10 @@ void AddOSContext(
       "name", rapidjson::Value(osName.c_str(), osName.length(), allocator),
       allocator);
 
-   const std::string osVersion =
-      std::to_string(platformInfo.GetOSMajorVersion()) + "." +
-      std::to_string(platformInfo.GetOSMinorVersion()) + "." +
-      std::to_string(platformInfo.GetOSMicroVersion());
+   const std::string osVersion = ".";
+//       std::to_string(platformInfo.GetOSMajorVersion()) + "." +
+//       std::to_string(platformInfo.GetOSMinorVersion()) + "." +
+//       std::to_string(platformInfo.GetOSMicroVersion());
 
    osContext.AddMember(
       "version",
@@ -420,7 +420,7 @@ std::string Report::GetReportPreview() const
 
 void Report::Send(CompletionHandler completionHandler) const
 {
-   mImpl->Send(std::move (completionHandler));
+   //mImpl->Send(std::move (completionHandler));
 }
 
 
