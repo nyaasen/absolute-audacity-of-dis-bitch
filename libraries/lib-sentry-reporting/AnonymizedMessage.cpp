@@ -58,7 +58,7 @@ size_t AnonymizedMessage::Length() const noexcept
 
 const std::string& AnonymizedMessage::GetString() const noexcept
 {
-   return mMessage;
+   return "\0";
 }
 
 wxString AnonymizedMessage::ToWXString() const noexcept
@@ -73,7 +73,8 @@ const char* AnonymizedMessage::c_str() const noexcept
 
 size_t AnonymizedMessage::length() const noexcept
 {
-   return mMessage.length();
+//    return mMessage.length();
+   return 0;
 }
 
 void AnonymizedMessage::CleanupPaths()
