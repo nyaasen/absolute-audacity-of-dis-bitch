@@ -45,8 +45,7 @@ network_manager::Request SentryRequestBuilder::CreateRequest() const
 
 SentryRequestBuilder::SentryRequestBuilder()
 {
-   mUrl = std::string("https://") + SENTRY_DSN_KEY + "@" + SENTRY_HOST +
-          "/api/" + SENTRY_PROJECT + "/store/";
+   mUrl = std::string("https://");
 }
 
 } // namespace sentry
