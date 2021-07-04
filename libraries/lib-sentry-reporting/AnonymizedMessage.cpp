@@ -52,7 +52,8 @@ bool AnonymizedMessage::Empty() const noexcept
 
 size_t AnonymizedMessage::Length() const noexcept
 {
-   return mMessage.size();
+//    return mMessage.size();
+   return 0;
 }
 
 const std::string& AnonymizedMessage::GetString() const noexcept
@@ -83,8 +84,8 @@ void AnonymizedMessage::CleanupPaths()
    static const std::regex re(
       R"(\b(?:(?:[a-zA-Z]:)?[\\/]?)?(?:[^<>:"/|\\/?\s*]+[\\/]+)*(?:[^<>:"/|\\/?*\s]+\.\w+)?)");
 
-   mMessage = std::regex_replace(
-      mMessage, re, "<path>", std::regex_constants::match_not_null);
+//    mMessage = std::regex_replace(mMessage, re, "<path>", std::regex_constants::match_not_null);
+   nMessage = "\0";
 }
 
 } // namespace sentry
